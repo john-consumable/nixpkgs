@@ -13,7 +13,7 @@
 
 buildPythonPackage rec {
   pname = "monty";
-  version = "2021.6.10";
+  version = "2021.8.17";
   disabled = pythonOlder "3.5"; # uses type annotations
 
   # No tests in Pypi
@@ -21,7 +21,7 @@ buildPythonPackage rec {
     owner = "materialsvirtuallab";
     repo = pname;
     rev = "v${version}";
-    sha256 = "01fhl4pl5gj4ahph4lxcm0fmglh0bjw6jz9ckmgzviasg4l1j6h4";
+    sha256 = "0lg6d0qk6iv476rcn45p5f50kips5g9s709cxddwnk5yrz57c4d0";
   };
 
   propagatedBuildInputs = [
