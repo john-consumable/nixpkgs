@@ -14,7 +14,7 @@
 
 buildPythonPackage rec {
   pname = "markdown-it-py";
-  version = "1.0.0";
+  version = "1.1.0";
   format = "pyproject";
 
   disabled = pythonOlder "3.6";
@@ -31,7 +31,7 @@ buildPythonPackage rec {
       # :arrow_up: UPGRADE: attrs -> v21 (#165)
       # https://github.com/executablebooks/markdown-it-py/pull/165
       url = "https://github.com/executablebooks/markdown-it-py/commit/78381ffe1a651741594dc93e693b761422512fa2.patch";
-      sha256 = "1kxhblpi4sycrs3rv50achr8g0wlgq33abg2acra26l736hlsya1";
+      sha256 = "0h7rn3rcqfwmnqs97qczwkw9w5g4df8bgn6sw7k149svfqgrkf56";
     })
   ];
 
