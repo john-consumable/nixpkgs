@@ -9,11 +9,11 @@
 
 buildPythonPackage rec {
   pname = "libarchive-c";
-  version = "2.9";
+  version = "3.1";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "9919344cec203f5db6596a29b5bc26b07ba9662925a05e24980b84709232ef60";
+    sha256 = "618a7ecfbfb58ca15e11e3138d4a636498da3b6bc212811af158298530fbb87e";
   };
 
   checkInputs = [ mock pytest glibcLocales ];
