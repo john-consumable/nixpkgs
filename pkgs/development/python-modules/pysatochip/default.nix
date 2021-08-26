@@ -3,12 +3,12 @@
 
 buildPythonPackage rec {
   pname = "pysatochip";
-  version = "0.11.4";
+  version = "0.12.3";
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-Jj/zZIS9aXmZ2xdi29Eun7iRIrIk9oBlrtN9+6opIMo=";
+    sha256 = "24db358a65c0402c299c0c62efcfbbfc98e494181cd30d3996949ac667d5b4d4";
   };
 
   propagatedBuildInputs = [ pyscard ecdsa pyaes ];
