@@ -10,6 +10,11 @@ buildPythonPackage rec {
     sha256 = "0e9fc7ca3f15657941d352ee2be5901d1606294577213e0f4c26cef20978e819";
   };
 
+  postPatch = ''
+    substituteInPlace setup.cfg \
+      --replace "tomli~=1.0.0" "tomli>=1.0.0"
+  '';
+
   # TODO: figure out why both toml and tomli are needed when only tomli is listed in setuptools-scm
   # if not both are listed some packages like zipp silently fallback to a 0.0.0 version number and break version pins in other packages
   propagatedBuildInputs = [ toml tomli ];
