@@ -1,13 +1,15 @@
 { lib
 , buildPythonPackage
 , fetchPypi
-, traitlets
+, entrypoints
 , jupyter_core
-, pyzmq
+, nest-asyncio
 , python-dateutil
+, pyzmq
+, tornado
+, traitlets
 , isPyPy
 , py
-, tornado
 }:
 
 buildPythonPackage rec {
@@ -20,11 +22,13 @@ buildPythonPackage rec {
   };
 
   propagatedBuildInputs = [
-    traitlets
+    entrypoints
     jupyter_core
-    pyzmq
+    nest-asyncio
     python-dateutil
+    pyzmq
     tornado
+    traitlets
   ] ++ lib.optional isPyPy py;
 
   # Circular dependency with ipykernel
