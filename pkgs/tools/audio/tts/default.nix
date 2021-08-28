@@ -27,6 +27,7 @@ python3.pkgs.buildPythonApplication rec {
 
   postPatch = ''
     sed -i -e 's!librosa==[^"]*!librosa!' requirements.txt
+    sed -i -e 's!mecab-python3==[^"]*!mecab-python3!' requirements.txt
     sed -i -e 's!numba==[^"]*!numba!' requirements.txt
     sed -i -e 's!numpy==[^"]*!numpy!' requirements.txt
     sed -i -e 's!umap-learn==[^"]*!umap-learn!' requirements.txt
