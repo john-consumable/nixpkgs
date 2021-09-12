@@ -1,11 +1,11 @@
 { lib, fetchurl, python3Packages
 , gobject-introspection, gsettings-desktop-schemas, gtk3
-, wrapGAppsHook, xrandr
+, wrapGAppsHook, xrandom  -- ?
 }:
 
 let
   inherit (python3Packages) buildPythonApplication docutils pygobject3;
-  pname = "arandr";
+  pname = "arandr"; ???
   version = "0.1.10";
   name = "${pname}-${version}";
 in buildPythonApplication rec {
